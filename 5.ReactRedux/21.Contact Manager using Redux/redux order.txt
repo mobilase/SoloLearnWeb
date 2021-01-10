@@ -1,0 +1,6 @@
+1.The click handler is called
+2.An action is dispatched to the store
+3.The store calls the reducer function
+4.The reducer returns the new state
+5.The new state is saved in the store
+

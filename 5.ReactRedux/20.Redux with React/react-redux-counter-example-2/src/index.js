@@ -5,9 +5,11 @@ import { createStore } from 'redux';
 import Counter from './Counter';
 import './style.css';
 
+// init
 const initialState = {
   count: 0
 };
+
 // Reducer function
 function reducer(state = initialState, action) {
   switch(action.type) {
@@ -18,12 +20,13 @@ function reducer(state = initialState, action) {
   }
 }
 
+// Create store
 const store = createStore(reducer);
-const el = <Provider store={store}>
-          <Counter/>
-        </Provider>; 
 
+// Render
 ReactDOM.render(
-  el, 
+  <Provider store={store}>
+    <Counter/>
+  </Provider>,
   document.getElementById('root')
 );

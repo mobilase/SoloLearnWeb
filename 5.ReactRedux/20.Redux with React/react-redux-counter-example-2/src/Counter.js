@@ -6,6 +6,7 @@ function incrementCounter(num) {
   return { type: 'INCREMENT', num: num }
 }
 
+// Component
 function Counter(props) {
   function handleClick() {
     props.incrementCounter(1);
@@ -16,6 +17,7 @@ function Counter(props) {
     </div>;
 }
 
+// Mapping
 function mapStateToProps(state) {
   return {
     count: state.count
@@ -25,4 +27,5 @@ const mapDispatchToProps = {
   incrementCounter
 }
 
+// Connect to store
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
